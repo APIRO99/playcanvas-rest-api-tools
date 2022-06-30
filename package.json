@@ -1,0 +1,26 @@
+{
+  "name": "rest-api-tools",
+  "version": "1.0.0",
+  "description": "A suite of node scripts to use the PlayCanvas REST API",
+  "scripts": {
+    "download": "node download-project.js",
+    "csp": "node csp-patch.js",
+    "archive": "node archive-project.js",
+    "archive-all": "node archive-project-all.js",
+    "test-one-page": "node tests/test-one-page.js",
+    "one-page": "node one-page.js",
+    "cordova-publish": "node cordova-publish.js"
+  },
+  "author": "support@playcanvas.com",
+  "license": "MIT",
+  "dependencies": {
+    "adm-zip": "^0.4.14",
+    "base64-js": "^1.5.1",
+    "btoa": "^1.2.1",
+    "dotenv": "^8.2.0",
+    "lz4": "^0.6.5",
+    "node-fetch": "^2.6.1",
+    "replace-string": "^3.1.0",
+    "terser": "^5.5.1"
+  }
+}
