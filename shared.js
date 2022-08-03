@@ -191,7 +191,7 @@ function unzipProject(zipLocation, unzipFolderName) {
 function zipProject(rootFolder, targetLocation) {
     return new Promise((resolve, reject) => {
         console.log("✔️ Zipping it all back again")
-        let output = path.resolve(__dirname, targetLocation);
+        let output = path.resolve(targetLocation);
         var zip = new Zip();
         zip.addLocalFolder(rootFolder);
         if (!fs.existsSync(path.dirname(output))) {

@@ -4,6 +4,7 @@ const dotenv = require('dotenv')
 const OutPath = dotenv.config().parsed['END_PATH'];
 const shared = require('./shared');
 const rocketPals = require('./rocketPals');
+let args = process.argv.slice(2);
 
 const config = shared.readConfig();
 
@@ -69,7 +70,7 @@ function getCspMetadataTag() {
 // If there are preload bundles, then the index.html in the
 // bundles will need to be modified too
 
-let writePath  =`${((OutPath) ? OutPath : `temp/out/`)}${config.playcanvas.name}_WithCSP_v${config.rocketPals.version}.zip`;
+let writePath  =`${((OutPath) ? OutPath : __dirname + `temp/out/`)}${config.playcanvas.name}_WithCSP_v${args[0] || config.rocketPals.version}.zip`;
 
 rocketPals.validateVariables();
 shared.downloadProject(config, "temp/downloads")
